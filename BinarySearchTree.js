@@ -54,6 +54,22 @@ class BST{
         }
         return curr;
     }
+
+    min(){
+        let node = this.root;
+        while(node.left!=null){
+            node = node.left;
+        }
+        return node.data;
+    }
+
+    max(){
+        let node = this.root;
+        while(node.right!=null){
+            node = node.right;
+        }
+        return node.data;
+    }
 }
 
 const bst = new BST();
@@ -63,3 +79,5 @@ bst.insert(3);
 bst.insert(10);
 bst.insert(15);
 bst.search(2);
+console.log(bst.min());
+console.log(bst.max());
